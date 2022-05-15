@@ -1,0 +1,14 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show: Mostrar %{model}
+  activerecord:
+    modules:
+      owner:
+        one: Propietario
+        other: Propietarios
+    attributes:
+      owner:
+        name: Nombre Completo
+        last_name: Apellido

@@ -1,0 +1,10 @@
+%p{:style => "color: green"}= notice
+%h1 
+  = t('application.list_of', model: t('activerecord.modules.owner.other'))
+
+#owners
+  - @owners.each do |owner|
+    = render owner
+    %p
+      = link_to t('application.show', model: t('activerecord.modules.owner.one')), owner
+= link_to t('application.new', model: t('activerecord.modules.owner.one')), new_owner_path

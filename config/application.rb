@@ -14,5 +14,7 @@ module Lenguajes1
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{yml}')]
+    I18n.default_locale = :es
   end
 end
