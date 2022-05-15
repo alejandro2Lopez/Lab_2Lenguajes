@@ -8,6 +8,7 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'haml'
+gem 'httparty'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
