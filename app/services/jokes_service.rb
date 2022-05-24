@@ -1,0 +1,3 @@
+class JokesService
+
+end
