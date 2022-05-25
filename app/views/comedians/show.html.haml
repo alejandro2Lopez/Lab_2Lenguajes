@@ -1,0 +1,22 @@
+%p#notice= notice 
+
+.card.ml-4.m-4 
+  .card-body 
+    %h5.card-subtitle 
+      =t('activerecord.attributes.comedian.first_name')
+    %p.card-text &nbsp #{@comedian.first_name}
+
+    %h5.card-subtitle
+      =t('activerecord.attributes.comedian.last_name')
+    %p.card-text &nbsp #{@comedian.last_name}
+
+    %h5.card-subtitle 
+      =t('activerecord.attributes.comedian.id_number')
+    %p.card-text &nbsp #{@comedian.id_number}
+    %h5.card-subtitle
+      =t('application.level')
+    %p.card-text &nbsp #{@comedian.level}
+
+.row.mt-3 
+  .col-3.m-4 
+    = link_to t('application.back'), comedians_path, class: "btn btn-secondary  btn-block"

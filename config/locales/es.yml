@@ -1,0 +1,31 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo
+    show: Mostrar 
+    edit: Editar
+    delete: Eliminar
+    update: Actualizar
+    updating: Actualizando
+    back: Atrás
+    save: Guardar
+    saving: Guardando
+    accept: Aceptar
+    cancel: Cancelar
+    level: nivel
+    do_you_want_to_delete: Desea eliminar el %{model}
+  activerecord:
+    modules:
+      comedian:
+        one: Comediante
+        other: Comediantes
+    attributes:
+      comedian:
+        first_name: Nombre Completo
+        last_name: Apellido
+        id_number: Identificación
+      level:
+        levels:
+          high: Alto
+          low: Bajo
+          medium: medio

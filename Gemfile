@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby '2.7.0'
+ruby '3.0.0'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'bootsnap', require: false
@@ -15,6 +15,7 @@ gem 'net-http'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
+gem 'rubocop'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
