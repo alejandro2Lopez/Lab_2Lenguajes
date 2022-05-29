@@ -14,11 +14,21 @@ es:
     cancel: Cancelar
     level: nivel
     do_you_want_to_delete: Desea eliminar el %{model}
+   
   activerecord:
     modules:
       comedian:
         one: Comediante
         other: Comediantes
+      event:
+        one: Evento
+        other: Eventos
+      contract:
+        one: Contrato
+        other: Contratos
+      record:
+        one: Historial
+        other: Historiales
     attributes:
       comedian:
         first_name: Nombre Completo
@@ -29,3 +39,9 @@ es:
           high: Alto
           low: Bajo
           medium: medio
+      event: 
+        typpe: Tipo
+      contract:
+        locate: locacion
+      record:
+        version: versión

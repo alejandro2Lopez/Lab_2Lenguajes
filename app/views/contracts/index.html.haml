@@ -1,0 +1,30 @@
+.page-header
+  %p{style: "color: green"}= notice
+
+  %h1.mb-4.m-4
+    = t('application.list_of', model: t('activerecord.modules.contract.other'))
+    .float-right
+      = link_to t('application.new'), new_contract_path, class: "btn btn-primary"
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t('activerecord.attributes.contract.locate')
+      %th
+      %th
+      %th
+      %th
+      %th
+      %th
+  %tbody
+    - @contracts.each do |contract|
+      %tr
+        %td= contract.locate
+       
+       
+        %td= link_to  t('application.show'), contract, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_contract_path(contract), class: "btn btn-success"
+        %td= link_to t('aplication.delete'), contract , method: :delete , class: "btn btn-danger",
+          data: {confirm: t('application.do_you_want_to_delete', model: t('activerecord.modules.comedian.one')),
+          accept: t('aplication.accept'),
+          reject: t('aplication.cancel')}

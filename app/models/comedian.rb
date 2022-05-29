@@ -1,4 +1,6 @@
 class Comedian < ApplicationRecord
+  has_many :contracts, through: :record
+  has_many  :events, dependent: :destroy
   validates :first_name, length: { maximum: 10 }, presence: true
   validates :last_name, length: { maximum: 15 }, presence: true
 

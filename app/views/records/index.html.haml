@@ -1,0 +1,31 @@
+.page-header
+  %p{style: "color: green"}= notice
+
+  %h1.mb-4.m-4
+    = t('application.list_of', model: t('activerecord.modules.record.other'))
+    .float-right
+      = link_to t('application.new'), new_record_path, class: "btn btn-primary"
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t('activerecord.attributes.record.version')
+      %th= t('activerecord.attributes.contract.locate')
+      %th= t('activerecord.modules.comedian.one')
+      %th
+      %th
+      %th
+      %th
+  %tbody
+    - @records.each do |record|
+      %tr
+        %td= record.version
+        %td= record.contract.locate
+        %td= "#{record.comedian.first_name}  #{record.comedian.last_name}"
+       
+        %td= link_to  t('application.show'), record, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_record_path(record), class: "btn btn-success"
+        %td= link_to t('aplication.delete'), record, method: :delete , class: "btn btn-danger",
+          data: {confirm: t('application.do_you_want_to_delete', model: t('activerecord.modules.comedian.one')),
+          accept: t('aplication.accept'),
+          reject: t('aplication.cancel')}

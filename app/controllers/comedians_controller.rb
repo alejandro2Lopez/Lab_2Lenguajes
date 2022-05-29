@@ -1,6 +1,6 @@
 class ComediansController < ApplicationController
   before_action :set_comedian, only: %i[show edit update destroy]
-  
+
   def index
     @comedians = Comedian.all
   end
@@ -15,7 +15,7 @@ class ComediansController < ApplicationController
 
   def create
     @comedian = Comedian.new(comedian_params)
-
+   # JokesService.new.save_Jokes
     if @comedian.save
       redirect_to comedian_url(@comedian), notice: 'Comedian was successfully created.'
 

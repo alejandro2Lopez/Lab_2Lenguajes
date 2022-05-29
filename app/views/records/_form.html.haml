@@ -1,0 +1,22 @@
+= form_for @record, validate: true do |f|
+  .form-group.ml-4.mr-4
+    =f.label t('activerecord.attributes.record.version'), class: "form-label required"
+    =f.text_field :version, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4 
+    = f.label t('activerecord.modules.comedian.one'), class: 'form-label required'
+    = f.select(:comedian_id, options_for_select(@comedians, @record.comedian),
+                        {prompt: "Seleccione"}, class: 'form-control')
+  .form-group.ml-4.mr-4 
+    = f.label t('activerecord.modules.contract.one'), class: 'form-label required'
+    = f.select(:contract_id, options_for_select(@contracts, @record.contract),
+                        {prompt: "Seleccione"}, class: 'form-control')
+  .row
+    .offset-3.col-3
+      = link_to  t('application.back'), records_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag  t('application.save'), class: "btn btn-success btn-block",
+        'data-disable-with': t('application.saving')
+
+
+

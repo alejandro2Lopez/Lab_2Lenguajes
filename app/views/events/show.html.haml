@@ -1,0 +1,17 @@
+%p#notice= notice 
+
+.card.ml-4.m-4 
+  .card-body 
+    %h5.card-subtitle 
+      =t('activerecord.modules.event.one')
+    %p.card-text &nbsp #{@event.typpe}
+
+    %h5.card-subtitle
+      =t('activerecord.modules.comedian.one')
+    %p.card-text &nbsp #{ @event.comedian.first_name}  #{@event.comedian.last_name}
+
+
+
+.row.mt-3 
+  .col-3.m-4 
+    = link_to t('application.back'), comedians_path, class: "btn btn-secondary  btn-block"

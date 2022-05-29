@@ -1,0 +1,13 @@
+%p#notice= notice 
+
+.card.ml-4.m-4 
+  .card-body 
+    %h5.card-subtitle 
+      =t('activerecord.modules.contract.one')
+    %p.card-text &nbsp #{@contract.locate}
+
+
+
+.row.mt-3 
+  .col-3.m-4 
+    = link_to t('application.back'), contracts_path, class: "btn btn-secondary  btn-block"

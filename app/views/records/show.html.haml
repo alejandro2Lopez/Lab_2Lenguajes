@@ -1,0 +1,21 @@
+%p#notice= notice 
+
+.card.ml-4.m-4 
+  .card-body 
+    %h5.card-subtitle 
+      =t('activerecord.modules.record.one')
+    %p.card-text &nbsp #{@record.version}
+
+    %h5.card-subtitle 
+      =t('activerecord.modules.contract.one')
+    %p.card-text &nbsp #{@record.contract.locate}
+
+    %h5.card-subtitle
+      =t('activerecord.modules.comedian.one')
+    %p.card-text &nbsp #{ @record.comedian.first_name}  #{@record.comedian.last_name}
+
+
+
+.row.mt-3 
+  .col-3.m-4 
+    = link_to t('application.back'), records_path, class: "btn btn-secondary  btn-block"
